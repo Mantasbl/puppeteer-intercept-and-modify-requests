@@ -185,7 +185,7 @@ export class RequestInterceptionManager {
 
         const body =
           base64Encoded && rawBody
-            ? Buffer.from(rawBody, 'base64').toString('utf8')
+            ? Buffer.from(rawBody, 'base64')
             : rawBody
         const { delay, ...modification } = (await modifyResponse?.({
           body,
